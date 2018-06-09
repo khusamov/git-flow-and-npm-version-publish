@@ -1,0 +1,31 @@
+{
+  "author": "Khusamov Sukhrob <khusamov@yandex.ru>",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "ts-mocha src/test/**/*.spec.ts",
+    "release:start:minor": "npm version minor --no-git-tag-version",
+    "release:start:patch": "npm version patch --no-git-tag-version",
+    "release:finish:npm-publish": "npm run release:finish && npm publish",
+    "release:finish": "git flow release finish v%npm_package_version% -m \"Версия %npm_package_version%\"",
+    "preversion": "npm test && git checkout develop && git flow release start v%npm_package_version%",
+    "postversion": "git add . && git commit -m \"Изменение версии на %npm_package_version%\"",
+    "prepublishOnly": "npm test && tsc",
+    "postpublish": "rmdir /S /Q dist && git push && git push --tags"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^5.2.1",
+    "@types/node": "^10.3.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "ts-mocha": "^1.2.0",
+    "ts-node": "^6.1.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.1"
+  }
+}
