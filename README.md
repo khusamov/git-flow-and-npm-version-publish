@@ -1,5 +1,5 @@
-# git-flow-and-npm-version-publish
 Интеграция Git Flow и команд NPM version и publish
+===========================
 
 Перед началом использования данных скриптов включите отслеживание ветки develop:
 
