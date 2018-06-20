@@ -1,6 +1,12 @@
 # git-flow-and-npm-version-publish
 Интеграция Git Flow и команд NPM version и publish
 
+Перед началом использования данных скриптов включите отслеживание ветки develop:
+
+```bash
+git push --set-upstream origin develop
+```
+
 Инструкции для разработчика
 ===========================
 
@@ -19,12 +25,6 @@
 ```bash
 npm i
 git flow init
-```
-
-Включите отслеживание ветки develop:
-
-```bash
-git push --set-upstream origin develop
 ```
 
 Скрипты package.json
