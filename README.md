@@ -51,12 +51,12 @@ git flow init
 - фиксация изменений с описанием 'Изменение версии на...'
 
 
-    npm test
-    git checkout develop
-    git flow release start v%npm_package_version%"
-    Изменяется файл package.json (новая версия)
-    git add .
-    git commit -m \"Изменение версии на %npm_package_version%\"
+	npm test
+	git checkout develop
+	git flow release start v%npm_package_version%"
+	Изменяется файл package.json (новая версия)
+	git add .
+	git commit -m \"Изменение версии на %npm_package_version%\"
 
 ### release:finish:npm-publish
 
@@ -70,12 +70,12 @@ git flow init
 - отправка изменений в удаленный репозиторий
 
 
-    git flow release finish v%npm_package_version% -m \"Версия %npm_package_version%\"
-    npm test
-    tsc
-    rmdir /S /Q dist
-    git push
-    git push --tags
+	git flow release finish v%npm_package_version% -m \"Версия %npm_package_version%\"
+	npm test
+	tsc
+	rmdir /S /Q dist
+	git push
+	git push --tags
 
 
 
