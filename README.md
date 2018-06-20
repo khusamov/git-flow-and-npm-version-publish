@@ -21,6 +21,12 @@ npm i
 git flow init
 ```
 
+Включите отслеживание ветки develop:
+
+```bash
+git push --set-upstream origin develop
+```
+
 Скрипты package.json
 --------------------
 
