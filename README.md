@@ -75,7 +75,7 @@ git flow release finish v%npm_package_version% -m \"Версия %npm_package_ve
 npm test
 tsc
 rmdir /S /Q dist
-git push
+git push --all
 git push --tags
 ```
 
