@@ -15,7 +15,7 @@
     "preversion": "npm test && git checkout develop && git flow release start v%npm_package_version%",
     "postversion": "git add . && git commit -m \"Изменение версии на %npm_package_version%\"",
     "prepublishOnly": "npm test && tsc",
-    "postpublish": "rmdir /S /Q dist && git push && git push --tags"
+    "postpublish": "rmdir /S /Q dist && git push --all && git push --tags"
   },
   "devDependencies": {
     "@types/chai": "^4.1.2",
